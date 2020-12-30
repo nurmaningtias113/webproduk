@@ -6,8 +6,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
 
-  <title>Gp Bootstrap Template - Index</title>
+  <title>TTR STORE</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">TTR Store<span>.</span></a></h1>
+      <h1 class="active"><a href="#hero">TTR Store<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -60,7 +61,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <li class="active"><a href="#hero">Menu Utama</a></li>
           <li><a href="#about">Tentang</a></li>
           <li><a href="#contact">Kontak</a></li>
-
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-xl-2 col-md-4 col-6 mt-4 mt-md-0">
           <div class="button">
  
-            <h3><a href="#sepatu-anak">Anak - Anak</a></h3>
+            <h3><a href="#sepatu-anak">Anak</a></h3>
           </div>
         </div>
     </div>
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <img src="assets/img/sepatu.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>BARANG 100% BARU REAL PICT</h3>
+            <h3>BARANG 100% BARU REAL PICTURE</h3>
             <p class="font-italic">
               Empuk, Ringan, Elastis<br>
               <b>Beli Sepatu Gratis BOX</b>
@@ -139,11 +139,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          </div>
           <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center">
-              <h3><?php echo $pria['Jenis'];?> <?php echo $pria['Merk'];?></h3>
+              <h3><?php echo $pria['Jenis'];?></h3>
+              <h3><?php echo $pria['Merk'];?></h3>
               <h5> id : <?php echo $pria['id'];?></h5>
               <h5> Harga : <?php echo $pria['Harga'];?></h5>
               <h5> Stok : <?php echo $pria['Stok'];?></h5>
               <h5> Ukuran : <?php echo $pria['Ukuran'];?></h5>
+              <td>
+              <form method="POST">
+              <button type="button" class="btn btn-outline-warning"><a href="#contact">PESAN</a></button>
+              </form>
+              </td>
             </div><!-- End .content-->
           </div>
         </div>
@@ -161,11 +167,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          </div>
           <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center">
-              <h3><?php echo $wanita['Jenis'];?> <?php echo $wanita['Merk'];?></h3>
+              <h3><?php echo $wanita['Jenis'];?></h3>
+              <h3><?php echo $wanita['Merk'];?></h3>
               <h5> id : <?php echo $wanita['id'];?></h5>
               <h5> Harga : <?php echo $wanita['Harga'];?></h5>
               <h5> Stok : <?php echo $wanita['Stok'];?></h5>
               <h5> Ukuran : <?php echo $wanita['Ukuran'];?></h5>
+              <td>
+              <form method="POST">
+              <button type="button" class="btn btn-outline-warning"><a href="#contact">PESAN</a></button>
+              </form>
+              </td>
             </div><!-- End .content-->
           </div>
         </div>
@@ -181,12 +193,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php echo '<img width = "100%" src="data:image/jpeg;base64,'.base64_encode( $anak['Foto'] ).'"/>'; ?>
          </div>
           <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
+
+
+
             <div class="content d-flex flex-column justify-content-center">
-              <h3><?php echo $anak['Jenis'];?> <?php echo $anak['Merk'];?></h3>
+
+              <h3><?php echo $anak['Jenis'];?></h3>
+              <h3><?php echo $anak['Merk'];?></h3>
               <h5> id : <?php echo $anak['id'];?></h5>
               <h5> Harga : <?php echo $anak['Harga'];?></h5>
               <h5> Stok : <?php echo $anak['Stok'];?></h5>
               <h5> Ukuran : <?php echo $anak['Ukuran'];?></h5>
+              <td>
+              <form method="POST">
+              <button type="button" class="btn btn-outline-warning"><a href="#contact">PESAN</a></button>
+              </form>
+              </td>
             </div><!-- End .content-->
           </div>
         </div>
@@ -202,22 +224,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h2>Kontak</h2>
           <p>Kontak Kami</p>
         </div>
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Lokasi:</h4>
+                <p>Jl. Tentara Rakyat Mataram No. 51 Yogyakarta</p>
+              </div>
+
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>ttrstore@gmail.com</p>
+                <p>ttrstore4@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
-                <h4>whatsApp</h4>
+                <h4>Call:</h4>
                 <p>0813 2456 0945</p>
               </div>
 
             </div>
-
+         <!-- ======= SEND WhatsApp ======= -->
           </div>
-
+           <div class="col-lg-8 mt-5 mt-lg-0">
+            <form role="form" class="php-email-form">
+                <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="nama" class="form-control" id="nama" placeholder="Your Name"/>
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"/>
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="pesanan" id="pesanan" placeholder="Subject"/>
+                <div class="validate"></div>
+              </div>
+                <div class="form-group">
+                <textarea class="form-control" name="keterangan" rows="5" id="keterangan" placeholder="Tulis rincian pesanan berdasarkan ID barang"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="alamat" rows="5" id="alamat" placeholder="alamat penerima"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3"> 
+              </div>
+              <button id="send"> Send WhatsApp</button> 
+              </form>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -233,9 +292,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <h3>TTR Store<span>.</span></h3>
               <p>
                 Jl. Tentara Rakyat Mataram <br>
-                 nO. 51 Yogyakarta<br><br>
+                 No. 51 Yogyakarta<br><br>
                 <strong>Phone:</strong> 0813 2456 0945<br>
-                <strong>Email:</strong> ttrstore@gmail.com<br>
+                <strong>Email:</strong> ttrstore4@gmail.com<br>
               </p>
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
@@ -255,6 +314,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+
+      $("#send").click(function(){
+        var nama = document.getElementById('nama').value;
+        var email = document.getElementById('email').value;
+        var pesanan = document.getElementById('pesanan').value;
+        var keterangan = document.getElementById('keterangan').value;
+        var alamat = document.getElementById('alamat').value;
+
+        var phone = '6285799870131';
+        window.open('https://api.whatsapp.com/send?phone='+phone+'&text='+ 'halo saya '+nama+' (email : ' +email+ ') ingin memesan '+pesanan+' dengan rincian '+keterangan+' alamat penerima '+ alamat);
+    });
+        
+    });
+</script>
 
 </body>
 
